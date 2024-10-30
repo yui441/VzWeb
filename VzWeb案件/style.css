@@ -1,16 +1,442 @@
+
+/*リセットCSS*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+dd {
+  margin-left: 0;
+}
+a {
+  display: inline-block;
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  word-wrap: break-word;
+}
+abbr[title] {
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+}
+[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+[type="radio"] {
+  -webkit-appearance: radio;
+  appearance: radio;
+}
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled {
+  cursor: default;
+}
+:-moz-focusring {
+  outline: auto;
+}
+select:disabled {
+  opacity: inherit;
+}
+option {
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  resize: none;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+label[for] {
+  cursor: pointer;
+}
+table {
+  border-color: inherit;
+  border-collapse: collapse;
+}
+caption {
+  text-align: left;
+}
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+th {
+  text-align: left;
+  font-weight: bold;
+}
+picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+span {
+  display: inline-block;
+}
+
+/*トップ背景*/
 .top{
-    background-image: url(picture/AdobeStock_74359079.jpg);
+    background-image: url(picture/mv.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 992px;
-    margin: 0;
+    margin: 0; 
 }
 
+/*nav背景*/
 .nav{
     background-color: #000000;
     margin: 0;
     width: 100%;
     height: 85px;
+}
+
+/*nav*/
+.main-nav{
+    display: flex;
+    margin-top: 35px;
+    list-style: none;
+    font-size: 24px;
+}
+
+.main-nav li{
+    margin-left: 56px;
+}
+.main-nav a{
+    color: #fdfdfd;
+}
+
+/*カーソルがnavに触れた時に色が変わる*/
+.main-nav a:hover{
+  color: ;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*コンテンツの最大幅設定*/
+.wrapper{
+  /*max-width: 1400px;*/
+  padding: 0 220px;
+  margin: 0 auto;
+}
+
+/*topの文字*/
+.top{
+  text-align: center;
+}
+h1{
+  font-size: 72px;
+  padding-top: 320px;
+}
+.top p{
+  font-size: 16px;
+  padding-top: 43px;
+}
+
+/*ご予約*/
+.btn{
+  background-color: #000000;
+  padding-top: 17px;
+  padding-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn span{
+  color: #ffffff;
+  font-size: 30px;
+  position: relative;
+  left: -73px;
+}
+.contactbtn{
+  font-size: 16px;
+  color: #000000;
+  background-color: #e3ebfd;
+  padding: 18px 62px;
+  border: solid 2.5px #51596f;
+}
+
+/*ABOUT US 私たちについて*/
+.aboutus{
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 107px;
+  padding-bottom: 258px;
+}
+.aboutus h3{
+  font-size: 48px;
+  padding-bottom: 20px;
+}
+.aboutus h4{
+  font-size: 24px;
+  padding-bottom: 72px;
+
+}
+.aboutus img{
+  width: 500px;
+  height: 480px;
+}
+.aboutus p{
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  /*brかspanタグを使って１マス開けるか*/
+}
+.aboutus .flex{
+  display: flex;
+  gap: 0 87px;
+
+}
+
+/*FEATURES サービスの特徴*/
+.features{
+  background-color: #e3ebfd;
+  text-align: center;
+  padding-top: 115px;
+  padding-bottom: 182px;
+}
+.features img{
+  width: 300px;
+  height: 200px;
+}
+.features h3{
+  font-size: 48px;
+  padding-top: 115px;
+}
+.features h4{
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 96px;
+}
+h5{
+  font-size: 21px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: left;
+}
+.items p{
+  text-align: left;
+}
+.items span{
+  background-color: #ffffff;
+  width: 300px;
+  height: 200px;
+}
+.flexbox{
+  display: flex;
+  gap: 115px 50px;
+  flex-wrap: wrap;
+}
+.items{
+  width: 300px;
+
+}
+
+/*お悩みを解決しませんか？*/
+.background{
+  background-image: url(picture/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.background h2{
+  font-size: 64px;
+  padding-top: 98px;
+  padding-bottom: 114px;
+  color: #ffffff;
+}
+.background p{
+  padding-bottom: 80px;
+  color: #ffffff;
+  line-height: 60px;
+}
+/*VOICE お客様の声*/
+.voice{
+  background-color: #e3ebfd;
+  padding-top: 96px;
+  padding-bottom: 78px;
+}
+.voice h3{
+  font-size: 48px;
+  text-align: center;
+}
+.voice h4{
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 96px;
+  text-align: center;
+}
+.voice img{
+  height: 220px;
+  width: 220px;
+}
+.avoice{
+  background-color: #ffffff;
+  width: 1000px;
+  height: 305px;
+  display: flex;
+  text-align: left;
+}
+.bvoice{
+  background-color: #ffffff;
+  width: 1000px;
+  height: 305px;
+  display: flex;
+  text-align: right;
+}
+/*CONTACT お問い合わせ*/
+.contact{
+  padding-top: 123px;
+  padding-bottom: 182px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.contact h3{
+  font-size: 48px;
+}
+.contact h4{
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 94px;
+}
+.inquiry{
+  font-size: 30px;
+  padding-bottom: 48px;
+}
+.inquiryp{
+  font-size: 20px;
+  padding-bottom: 46px;
+}
+
+/*フッター*/
+footer{
+  background-color: #000000;
+  color: #ffffff;
+}
+.marker{
+  background-color: #e43737;
+  margin-left: 12px;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+}
+label{
+  font-size: 24px;
+}
+.form{
+  line-height: 71px;
 }
 
 
