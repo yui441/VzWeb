@@ -381,20 +381,38 @@ h5{
 .voice img{
   height: 220px;
   width: 220px;
+  margin: 42px 40px;
 }
 .avoice{
   background-color: #ffffff;
   width: 1000px;
   height: 305px;
   display: flex;
-  text-align: left;
+  margin-bottom: 64px;
 }
 .bvoice{
   background-color: #ffffff;
   width: 1000px;
   height: 305px;
   display: flex;
+}
+.avoice h5{
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 42px;
+}
+.bvoice h5{
   text-align: right;
+  padding-right: 40px;
+  padding-top: 42px;
+}
+.avoice p{
+  padding-left: 40px;
+  padding-bottom: 46px;
+}
+.bvoice p{
+  padding-right: 40px;
+  padding-bottom: 46px;
 }
 /*CONTACT お問い合わせ*/
 .contact{
@@ -419,12 +437,6 @@ h5{
   font-size: 20px;
   padding-bottom: 46px;
 }
-
-/*フッター*/
-footer{
-  background-color: #000000;
-  color: #ffffff;
-}
 .marker{
   background-color: #e43737;
   margin-left: 12px;
@@ -435,9 +447,20 @@ footer{
 label{
   font-size: 24px;
 }
-.form{
-  line-height: 71px;
+
+
+/*フッター*/
+footer{
+  background-color: #000000;
+  color: #ffffff;
 }
+.footer span{
+  display: flex;
+}
+.snsbtn{
+  display: flex;
+}
+
 
 
 
