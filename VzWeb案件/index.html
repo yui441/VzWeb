@@ -13,20 +13,20 @@
        
        <div class="nav wrapper">  
 
-         <img src="" alt="ロゴ">
+         <img src="picture/rogo.png" alt="ロゴ">
         
          <nav>
             <ul class="main-nav">
-                <li><a href="#">TOP</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">FEATURES</a></li>
-                <li><a href="#">VOICE</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#features">FEATURES</a></li>
+                <li><a href="#voice">VOICE</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
          </nav>
        </div>
        
-       <div class="top">
+       <div class="top" id="top">
 
          <h1>ホームページを無料で作成致します。 </h1>
          <p>
@@ -44,7 +44,7 @@
     </header>
 
     <main>
-       <div class="aboutus wrapper">
+       <div class="aboutus wrapper" id="about">
         <h3>ABOUT US</h3>
         <h4>私たちについて</h4>
         <div class="flex">
@@ -71,7 +71,7 @@
         
        </div> 
        
-       <div class="features wrapper">
+       <div class="features wrapper" id="features">
 
         <h3>FEATURES</h3>
         <h4>サービスの特徴</h4>
@@ -80,7 +80,7 @@
         <div class="flexbox">
 
          <div class="items">
-          <img src="picture/faetures-img.png" alt="">
+          <img src="picture/features-img.jpeg" alt="">
           <span>
             <h5>コーディング無料</h5>
             <p>
@@ -130,7 +130,7 @@
          </div>
         
          <div class="items">
-          <img src="picture/features-img5.jpeg" alt="">
+          <img src="picture/faetures-img5.png" alt="">
           <span>
             <h5>サイトアップロードのお手伝い</h5>
             <p>
@@ -142,17 +142,18 @@
       </div> 
          
 
-       <div class="background wrapper">
-
-        <h2>お悩みを解決しませんか？</h2>
-        <p>
+       <div class="worries">
+        <div class="worries-text wrapper">
+         <h2>お悩みを解決しませんか？</h2>
+         <p>
             「SNSでボランティア活動をしてますがなかなか人数が集まらない」、「ボランティア活動を始めたいけどホームページ作るとなると高い...」などボランティア活動にホームページが必要な方のお悩みを解決いたします。<br>
-            ※ホームページは無料で作成をしておりますが、別途サーバー代ドメイン代などの費用が発生いたします。<br>
-            こちらは私たちに払う費用ではございません。ホームページを持つための固定費になります。
-        </p>
+            <span>※ホームページは無料で作成をしておりますが、別途サーバー代ドメイン代などの費用が発生いたします。<br>
+            こちらは私たちに払う費用ではございません。ホームページを持つための固定費になります。</span>
+         </p>
+        </div>
        </div> 
 
-      <div class="voice wrapper">
+      <div class="voice wrapper" id="voice">
         
        <h3>VOICE</h3>
        <h4>お客様の声</h4>
@@ -178,7 +179,7 @@
         
       </div> 
 
-      <div class="contact wrapper">
+      <div class="contact wrapper" id="contact">
         <h3>CONTACT</h3>
         <h4>お問い合わせ</h4>
         <span class="inquiry">お気軽にお問い合わせください。</span>
@@ -186,17 +187,23 @@
              必須は修力が必ず必要な項目になります。</span>
         <form class="form">
             <label>お名前<span class="marker">必須</span></label>
-            <input type="text" placeholder="山田　太郎"><br>
+            <input type="text"  placeholder="山田　太郎"><br>
+
             <label>フリガナ<span class="marker">必須</span></label>
             <input type="text" placeholder="ヤマダ　タロウ"><br>
+
             <label>会社名（任意）</label>
             <input type="text" placeholder="株式会社⚪︎⚪︎"><br>
+
             <label>メールアドレス<span class="marker">必須</span></label>
-            <input type="text" placeholder="mail_address＠mail.mail"><br>
+            <input type="email" placeholder="mail_address＠mail.mail"><br>
+
             <label>お電話番号<span class="marker">必須</span></label>
-            <input type="text" placeholder="000-0000-0000"><br>
+            <input type="number" placeholder="000-0000-0000"><br>
+
             <label>ご用件<span class="marker">必須</span></label>
             <input type="text" placeholder="○○○○について"><br>
+
             <label>お問い合わせ内容<span class="marker">必須</span></label>
             <input type="text" placeholder="お問い合わせ内容をお書きください。"><br>
 
@@ -209,27 +216,20 @@
     </main>
 
     <footer>
-       <div class="footer wrapper"> 
-        <span>
-         <img src="" alt="ロゴ">
-         <ul class="snsbtn">
-            <li>
-                <img src="" alt="snsのアイコン">
-            </li>
-            <li>
-                <img src="" alt="snsのアイコン">
-            </li>
-            <li>
-                <img src="" alt="snsのアイコン">
-            </li>
-         </ul>
-        </span>
-        <div class="address">
+       <div class="footer wrapper">
+        
+        <div class="footer-name">
+        
+         <img src="picture/rogo.png" alt="ロゴ">
+         
+      
+         <div class="address">
             〒111-1111 <br>
              愛知県名古屋市中区栄1-1-1-1
-        </div>
-        <div class="name">
+         </div>
+         <div class="name">
             代表者 :高橋　克己
+         </div>
         </div>
         <div class="footer-menu">
             <ul class="footer-menu-list">
@@ -252,7 +252,7 @@
         </div>
        </div>
        <div class="coperight">
-        
+        <span>©</span>
        </div> 
 
 

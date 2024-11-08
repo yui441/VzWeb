@@ -191,6 +191,12 @@ span {
     height: 992px;
     margin: 0; 
 }
+/*navロゴ*/
+nav img{
+  width: 240px;
+  height: 80px;
+  
+}
 
 /*nav背景*/
 .nav{
@@ -216,9 +222,10 @@ span {
 }
 
 /*カーソルがnavに触れた時に色が変わる*/
-.main-nav a:hover{
+/*.main-nav a:hover{
   color: ;
-}
+
+}*/
 
 .nav{
   display: flex;
@@ -345,22 +352,50 @@ h5{
 }
 
 /*お悩みを解決しませんか？*/
-.background{
+.worries{
   background-image: url(picture/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
+  position: relative;
+  height: 644px;
+
 }
-.background h2{
+.worries::before{
+  background-color: rgba(0,0,0,.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
+.worries-text{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+}
+.worries h2{
   font-size: 64px;
   padding-top: 98px;
   padding-bottom: 114px;
   color: #ffffff;
+  text-align: center;
 }
-.background p{
+.worries p{
   padding-bottom: 80px;
   color: #ffffff;
-  line-height: 60px;
+  line-height: 44px;
+  font-size: 24px;
+}
+.worries span{
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 12px;
+  color: #f25151;
 }
 /*VOICE お客様の声*/
 .voice{
@@ -420,6 +455,7 @@ h5{
   padding-bottom: 182px;
   background-color: #ffffff;
   text-align: center;
+  
 }
 .contact h3{
   font-size: 48px;
@@ -446,6 +482,19 @@ h5{
 }
 label{
   font-size: 24px;
+  margin-bottom: 70px;
+  display: inline-block;
+  width: 260px;
+  text-align: right;
+  
+}
+
+input{
+  border: solid 1.25px;
+  width: 600px;
+  height: 60px;
+  
+  
 }
 
 
@@ -453,13 +502,41 @@ label{
 footer{
   background-color: #000000;
   color: #ffffff;
+  height: 400px;
 }
-.footer span{
+.footer img{
+  width: 240px;
+  height: 80px;
+  margin-top: 49px;
+  margin-bottom: 31px;
+  /*margin: 49px 627px 31px 219px;*/
+}
+.footer{
   display: flex;
+  font-size: 24px;
 }
-.snsbtn{
-  display: flex;
+.address{
+  line-height: 36px;
 }
+.name{
+  margin-top: 33px;
+  margin-bottom: 127px;
+}
+.footer-menu{
+  margin-top: 78px;
+  line-height: 44px;
+  
+}
+.coperight{
+  background-color: #ffffff;
+  height: 78px;
+}
+.coperight span{
+  font-size: 16px;
+}
+
+
+
 
 
 
