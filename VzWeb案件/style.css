@@ -209,22 +209,27 @@ span {
 .nav-inr{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 85px;
   
 }
 
 /*nav*/
 .main-nav{
     display: flex;
-    margin-top: 35px;
+
     list-style: none;
     font-size: 24px;
-    
-    
+    gap: 56px;    
 }
 
-.main-nav li{
-    margin-left: 56px;
+@media screen and (max-width:950px){
+  .main-nav{
+  gap: 30px;
+  font-size: 20px;
+ }
 }
+
 .main-nav a{
     color: #fdfdfd;
 }
@@ -234,6 +239,7 @@ span {
   color: ;
 
 }*/
+
 
 
 
@@ -255,6 +261,11 @@ h1{
 .top p{
   font-size: 16px;
   padding-top: 43px;
+}
+
+@media screen and (max-width:1280px){
+
+  
 }
 
 /*ご予約*/
@@ -344,11 +355,13 @@ h5{
 }
 .items span{
   background-color: #ffffff;
+  padding: 14px;
   width: 300px;
   height: 240px;
 }
 .flexbox{
   display: flex;
+  justify-content: center;
   gap: 115px 50px;
   flex-wrap: wrap;
   max-width: 1000px;
@@ -428,14 +441,14 @@ h5{
 }
 .avoice{
   background-color: #ffffff;
-  width: 1000px;
+  max-width: 1000px;
   height: 305px;
   display: flex;
   margin-bottom: 64px;
 }
 .bvoice{
   background-color: #ffffff;
-  width: 1000px;
+  max-width: 1000px;
   height: 305px;
   display: flex;
 }
@@ -513,23 +526,22 @@ label{
   margin-left: 74px;
   padding-left: 21px;
 }
+.form-contact{
+  display: flex;
+  justify-content: center;
+}
+
+
 .btn-submit{
   margin-top: 86px;
   margin-bottom: 182px;
   display: inline-block;
   position: relative;
   padding: 12px 50px;
-  border: solid 1px;
+  background-color: rgba(0,0,0,.8);
+  color: #fff;
 }
-.btn-submit::before{
-  content: "";
-  position: absolute;
-  top: -11px;
-  bottom: -11px;
-  right: -10px;
-  left: -10px;
-  border: solid 2.5px;
-}
+
 
 
 
