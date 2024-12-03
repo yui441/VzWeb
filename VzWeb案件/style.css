@@ -183,6 +183,11 @@ span {
   display: inline-block;
 }
 
+body{
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Serif", serif; 
+}
+
 /*トップ背景*/
 .top{
     background-image: url(picture/mv.jpg);
@@ -190,6 +195,11 @@ span {
     background-size: cover;
     height: 992px;
     margin: 0; 
+}
+@media screen and (max-width:1024px){
+  .top{
+    height: 800px;
+  }
 }
 /*navロゴ*/
 .nav img{
@@ -249,8 +259,19 @@ span {
   width: min(calc(100% - 32px), 1000px);
   margin: 0 auto;
 }
+.pc-none{
+  display: none;
+}
+
+@media screen and (max-width:1024px){
+ .pc-none{
+  display: block;
+ }
+}
 
 /*topの文字*/
+
+
 .top{
   text-align: center;
 }
@@ -258,15 +279,21 @@ h1{
   font-size: 72px;
   padding-top: 320px;
 }
+@media screen and (max-width:1280px){
+  h1{
+    font-size: 58px;
+  }
+}
+@media screen and (max-width:1024px){
+  h1{
+    padding-top: 280px;
+  }
+}
 .top p{
   font-size: 16px;
   padding-top: 43px;
 }
 
-@media screen and (max-width:1280px){
-
-  
-}
 
 /*ご予約*/
 .btn{
@@ -312,17 +339,34 @@ h1{
   height: 480px;
 }
 .aboutus p{
+  font-family: "Noto Sans", sans-serif;
   font-size: 16px;
   line-height: 30px;
   text-align: left;
   /*brかspanタグを使って１マス開けるか*/
 }
+@media screen and (max-width:1000px){
+  .aboutus p{
+    max-width: 600px;
+  }
+  .pc-none1000{
+    display: none;
+  }
+}
+
 .aboutus .flex{
   display: flex;
   gap: 0 87px;
   justify-content: center;
-
 }
+@media screen and (max-width:1000px){
+  .aboutus .flex{
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
 
 /*FEATURES サービスの特徴*/
 .features{
@@ -354,6 +398,7 @@ h5{
   text-align: left;
 }
 .items span{
+  font-family: "Noto Sans", sans-serif;
   background-color: #ffffff;
   padding: 14px;
   width: 300px;
@@ -390,6 +435,22 @@ h5{
   left: 0;
   content: ' ';
 }
+@media screen and (max-width:800px){
+  .worries{
+    height: 700px;
+  }
+}
+@media screen and (max-width:630px){
+  .worries{
+    height: 800px;
+  }
+}
+@media screen and (max-width:510px){
+  .worries{
+    height: 850px;
+  }
+}
+
 .worries-text{
   position: absolute;
   top: 0;
@@ -439,6 +500,12 @@ h5{
   width: 220px;
   margin: 42px 40px;
 }
+@media screen and (max-width:790px){
+  .voice img{
+    margin: 0;
+    padding-top: 20px;
+  }
+}
 .avoice{
   background-color: #ffffff;
   max-width: 1000px;
@@ -452,6 +519,20 @@ h5{
   height: 305px;
   display: flex;
 }
+@media screen and (max-width:790px){
+  .avoice{
+    flex-direction: column-reverse;
+    height: 450px;
+    align-items: center;
+  }
+  .bvoice{
+    flex-direction: column;
+    height: 450px;
+    align-items: center;
+  }
+
+  
+}
 .avoice h5{
   text-align: left;
   padding-left: 40px;
@@ -462,13 +543,33 @@ h5{
   padding-right: 40px;
   padding-top: 42px;
 }
+@media screen and (max-width:790px){
+  .avoice h5{
+    text-align: center;
+    padding-left: 0px;
+  }
+  .bvoice h5{
+    text-align: center;
+    padding-right: 0px;
+  }
+}
 .avoice p{
+  font-family: "Noto Sans", sans-serif;
   padding-left: 40px;
   padding-bottom: 46px;
 }
 .bvoice p{
+  font-family: "Noto Sans", sans-serif;
   padding-right: 40px;
   padding-bottom: 46px;
+}
+@media screen and (max-width:790px){
+  .avoice p{
+    padding-left: 0px;
+  }
+  .bvoice p{
+    padding-right: 0px;
+  }
 }
 /*CONTACT お問い合わせ*/
 .contact{
@@ -578,12 +679,11 @@ footer{
   
 }
 .coperight{
-  background-color: #ffffff;
+  color: #000;
   height: 78px;
+  text-align: center;
 }
-.coperight span{
-  font-size: 16px;
-}
+
 
 
 
