@@ -445,9 +445,19 @@ h5{
     height: 800px;
   }
 }
-@media screen and (max-width:510px){
+@media screen and (max-width:545px){
   .worries{
     height: 850px;
+  }
+}
+@media screen and (max-width:510px){
+  .worries{
+    height: 900px;
+  }
+}
+@media screen and (max-width:435px){
+  .worries{
+    height: 950px;
   }
 }
 
@@ -459,6 +469,10 @@ h5{
   left: 0;
   margin: auto;
 
+}
+@media screen and (max-width:800px){
+  .pc-none{
+    display: block;}
 }
 .worries h2{
   font-size: 64px;
@@ -529,10 +543,17 @@ h5{
     flex-direction: column;
     height: 450px;
     align-items: center;
-  }
-
-  
+  } 
 }
+@media screen and (max-width:390px){
+  .avoice{
+    padding-top: 50px;
+  }
+  .bvoice{
+    padding-bottom: 80px;
+  }
+}
+
 .avoice h5{
   text-align: left;
   padding-left: 40px;
@@ -565,10 +586,12 @@ h5{
 }
 @media screen and (max-width:790px){
   .avoice p{
-    padding-left: 0px;
+    padding: 0 20px 20px 20px;
+
   }
   .bvoice p{
-    padding-right: 0px;
+    padding: 0 20px 20px 20px;
+
   }
 }
 /*CONTACT お問い合わせ*/
