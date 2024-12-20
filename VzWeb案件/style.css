@@ -244,14 +244,6 @@ body{
     color: #fdfdfd;
 }
 
-/*カーソルがnavに触れた時に色が変わる*/
-/*.main-nav a:hover{
-  color: ;
-
-}*/
-
-
-
 
 /*コンテンツの最大幅設定*/
 .wrapper{
@@ -289,6 +281,26 @@ h1{
     padding-top: 280px;
   }
 }
+@media screen and (max-width:578px){
+  h1{
+    font-size: 50px;
+  }
+}
+@media screen and (max-width:520px){
+  h1{
+    font-size: 45px;
+  }
+} 
+@media screen and (max-width:450px){
+  h1{
+    font-size: 40px;
+  }
+} 
+@media screen and (max-width:400px){
+  h1{
+    font-size: 37px;
+  }
+} 
 .top p{
   font-size: 16px;
   padding-top: 43px;
@@ -304,12 +316,18 @@ h1{
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width:650px){
+  .btn{
+    flex-direction: column;
+  }
+} 
 .btn span{
   color: #ffffff;
   font-size: 30px;
   position: relative;
   left: -73px;
 }
+
 .contactbtn{
   font-size: 16px;
   color: #000000;
@@ -442,22 +460,22 @@ h5{
 }
 @media screen and (max-width:630px){
   .worries{
-    height: 800px;
+    height: 720px;
   }
 }
 @media screen and (max-width:545px){
   .worries{
-    height: 850px;
+    height: 740px;
   }
 }
 @media screen and (max-width:510px){
   .worries{
-    height: 900px;
+    height: 760px;
   }
 }
 @media screen and (max-width:435px){
   .worries{
-    height: 950px;
+    height: 770px;
   }
 }
 
@@ -481,11 +499,26 @@ h5{
   color: #ffffff;
   text-align: center;
 }
+@media screen and (max-width:768px){
+  .worries h2{
+    font-size: 44px;
+  }
+}
 .worries p{
   padding-bottom: 80px;
   color: #ffffff;
   line-height: 44px;
   font-size: 24px;
+}
+@media screen and (max-width:800px){
+  .worries p{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:768px){
+  .worries p{
+    font-size: 18px;
+  }
 }
 .worries span{
   font-size: 16px;
@@ -536,23 +569,16 @@ h5{
 @media screen and (max-width:790px){
   .avoice{
     flex-direction: column-reverse;
-    height: 450px;
+    height: auto;
     align-items: center;
   }
   .bvoice{
     flex-direction: column;
-    height: 450px;
+    height: auto;
     align-items: center;
   } 
 }
-@media screen and (max-width:390px){
-  .avoice{
-    padding-top: 50px;
-  }
-  .bvoice{
-    padding-bottom: 80px;
-  }
-}
+
 
 .avoice h5{
   text-align: left;
@@ -684,10 +710,22 @@ footer{
   margin-bottom: 31px;
   /*margin: 49px 627px 31px 219px;*/
 }
+@media screen and (max-width:768px){
+  .footer img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 .footer{
   display: flex;
   font-size: 24px;
   justify-content: space-between;
+}
+@media screen and (max-width:768px){
+  .footer{
+    justify-content: center;
+  }
 }
 .address{
   line-height: 36px;
@@ -700,6 +738,11 @@ footer{
   margin-top: 78px;
   line-height: 44px;
   
+}
+@media screen and (max-width:768px){
+  .footer-menu{
+    display: none;
+  }
 }
 .coperight{
   color: #000;
