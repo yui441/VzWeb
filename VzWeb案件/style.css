@@ -245,6 +245,8 @@ body{
 }
 
 
+
+
 /*コンテンツの最大幅設定*/
 .wrapper{
   /*max-width: 1400px;*/
@@ -316,17 +318,18 @@ h1{
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width:650px){
-  .btn{
-    flex-direction: column;
-  }
-} 
+
 .btn span{
   color: #ffffff;
   font-size: 30px;
   position: relative;
   left: -73px;
 }
+@media screen and (max-width:650px){
+  .btn span{
+    display: none;
+  }
+
 
 .contactbtn{
   font-size: 16px;
@@ -504,6 +507,12 @@ h5{
     font-size: 44px;
   }
 }
+@media screen and (max-width:384px){
+  .worries h2{
+    font-size: 42px;
+  }
+}
+
 .worries p{
   padding-bottom: 80px;
   color: #ffffff;
@@ -750,7 +759,19 @@ footer{
   text-align: center;
 }
 
-
+/*ハンバーガーメニュー*/
+@media screen and (max-width:1024px){
+  header nav{
+    box-sizing: border-box;
+    position: fixed;
+    top: 60px;
+    display: none;
+    width: 100%;
+    height: calc(100%-60px);
+    background: #fff;
+    opacity: 0.9;
+  }
+}
 
 
 
