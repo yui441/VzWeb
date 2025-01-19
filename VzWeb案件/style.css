@@ -1,0 +1,947 @@
+
+/*リセットCSS*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+dd {
+  margin-left: 0;
+}
+a {
+  display: inline-block;
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  word-wrap: break-word;
+}
+abbr[title] {
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+}
+[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+[type="radio"] {
+  -webkit-appearance: radio;
+  appearance: radio;
+}
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled {
+  cursor: default;
+}
+:-moz-focusring {
+  outline: auto;
+}
+select:disabled {
+  opacity: inherit;
+}
+option {
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  resize: none;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+label[for] {
+  cursor: pointer;
+}
+table {
+  border-color: inherit;
+  border-collapse: collapse;
+}
+caption {
+  text-align: left;
+}
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+th {
+  text-align: left;
+  font-weight: bold;
+}
+picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+span {
+  display: inline-block;
+}
+
+body{
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Serif", serif; 
+}
+
+.header {
+  background-color: #000;
+}
+
+/*
+ ロゴとメニューを横並びに、上下中央にし、ロゴとメニューの余白に関しては
+ justify-content: space-between;で.containerの幅の中で
+ ロゴは左側にいき、メニューは右側に行くように余白をっている
+ */
+.header-inr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Photoshopでのデザインが240pxのため記述。 */
+/*
+ここでwidth:240pxとすると画面幅が縮まった際に240pxで固定になってしまうため
+maxでの記載画面縮めていってもロゴのサイズが小さくなっていくようにmaxをつけている
+240pxの固定で問題なさそうであればmaxはなくてもよい 
+*/
+.header-inr h1 {
+  max-width: 240px;
+  position: relative;
+  z-index: 999;
+}
+
+@media screen and (max-width: 768px) {
+  .header-inr h1 {
+    max-width: 200px;
+    /* 
+    スマホ時大きく感じたため調整
+     */
+  }
+}
+
+/* メニューを横並びにし余白(gap)を58pxとしている */
+.header-inr ul {
+  display: flex;
+  gap: 58px;
+  font-size: 24px;
+  color: #fff;
+}
+.header-inr ul a{
+  color: #fff;
+}
+
+/* ハンバーガーメニューの開いた状態の各メニュー項目同士の間隔 */
+@media screen and (max-width: 1024px) {
+  .header-inr ul {
+    gap: 20px;
+  }
+}
+
+/* メニュー項目を非表示にし、ハンバーガーメニューに切り替える */
+@media screen and (max-width: 1024px) {
+  .header-nav {
+    display: none;
+  }
+}
+
+/* 以下ハンバーガーメニュー */
+/* ハンバーガーボタンのデザイン */
+.hamburger-button {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+   /* 
+   メニューを開いている時もクリックできるよう設定
+   ここの999の数字を下げてしまうと線が見えなくなってしまう
+    */
+  display: none;
+}
+
+/* 
+ここでハンバーガーメニューの3本線が表示されるようにしている
+ */
+ @media screen and (max-width: 1024px) {
+    .hamburger-button {
+      display: block;
+    }
+  }
+
+
+  /* ３本線のボタンに関する記述 */
+.hamburger-button > span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2px;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+
+.hamburger-button > span:first-child {
+  transform: translate(-50%, calc(-50% - 0.7rem));
+  transition: transform 0.6s ease;
+}
+
+.hamburger-button > span:nth-child(2) {
+  transform: translate(-50%, -50%);
+  transition: opacity 0.6s ease;
+}
+
+.hamburger-button > span:last-child {
+  transform: translate(-50%, calc(-50% + 0.7rem));
+  transition: transform 0.6s ease;
+}
+
+.hamburger-button.active > span:first-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hamburger-button.active > span:first-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hamburger-button.active > span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-button.active > span:last-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* ここまでボタンに関する記述 */
+
+/* メニューのデザイン */
+.nav-sp {
+  position: fixed; /* 追従ヘッダーなどでも表示できるよう設定しておく */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.6s;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  z-index: 998;
+  /* 
+  .hamburger-buttonにも同じ記述があるがこちらは998となっている
+  数字が大きいほど重なり順で一番上に表示される
+  試しに999にしてハンバーガーメニューを開くと３本線が見えなくなってしまう
+  試してみてください。
+  ハンバーガーメニューの３本線は常に一番上にないといけないため999で
+  ここはメニューの部分になるため３本線よりは１つ下に表示してほしいため998としている
+   */
+
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-sp {
+    display: block;
+  }
+}
+
+.nav-sp.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-sp_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  padding: 6rem 1.5rem 1rem;
+  /*
+  メニュー上下左右に余白をとっている
+  remと記述しているがpxでも問題ございません。
+   */
+  margin: 0 0 0 auto;
+  overflow: scroll;
+  transform: translateX(100%);
+  /* 
+  ↑この記述はメニューがどのようなアニメーションで開くかを制御している
+  現在右からスライドして出てくる
+  この記述を消すとふわっと表示される
+  試してみてください。
+   */
+  transition: transform 0.6s ease;
+  /* 
+  ↑この記述はメニューがどのぐらいの速度で表示されるか
+  今は0.6秒で表示される
+  6sなどにすると6秒かけて表示される
+  試してみてください。
+   */
+}
+
+.nav-sp_menu {
+  display: flex;
+  flex-direction: column;
+  /* 
+  メニューの項目を並びにしている
+   */
+}
+
+.nav-sp_link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 1rem;
+  border-bottom: solid 1px lightgray;
+  /* 
+  メニューの中身の各項目
+  上下に余白がないと押した際に他のメニューが反応してしまう可能性があるため
+  すこし、押せる範囲を広げている
+  background-color: aqua;
+  などを入れて押せる範囲がどのぐらいあるのか目で確かめてみてください。
+   */
+}
+
+.nav-sp.active .nav-sp_inner {
+  transform: translateX(0);
+}
+
+/* ハンバーガーメニュー展開時、背景を固定 */
+body.active {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+/*コンテンツの最大幅設定*/
+.wrapper{
+  /*max-width: 1400px;*/
+  width: min(calc(100% - 32px), 1000px);
+  margin: 0 auto;
+}
+.pc-none{
+  display: none;
+}
+
+@media screen and (max-width:1024px){
+ .pc-none{
+  display: block;
+ }
+}
+
+/*トップ背景*/
+.top{
+  background-image: url(picture/mv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 992px;
+  margin: 0; 
+}
+@media screen and (max-width:1024px){
+.top{
+  height: 800px;
+}
+}
+
+/*topの文字*/
+
+
+.top{
+  text-align: center;
+}
+h1{
+  font-size: 72px;
+  padding-top: 320px;
+}
+@media screen and (max-width:1280px){
+  h1{
+    font-size: 58px;
+  }
+}
+@media screen and (max-width:1024px){
+  h1{
+    padding-top: 280px;
+  }
+}
+@media screen and (max-width:578px){
+  h1{
+    font-size: 50px;
+  }
+}
+@media screen and (max-width:520px){
+  h1{
+    font-size: 45px;
+  }
+} 
+@media screen and (max-width:450px){
+  h1{
+    font-size: 40px;
+  }
+} 
+@media screen and (max-width:400px){
+  h1{
+    font-size: 37px;
+  }
+} 
+.top p{
+  font-size: 16px;
+  padding-top: 43px;
+}
+
+
+/*ご予約*/
+.btn{
+  background-color: #000000;
+  padding-top: 17px;
+  padding-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn span{
+  color: #ffffff;
+  font-size: 30px;
+  position: relative;
+  left: -73px;
+}
+@media screen and (max-width:650px){
+  .btn span{
+    display: none;
+  }
+} 
+
+
+.contactbtn{
+  font-size: 16px;
+  color: #000000;
+  background-color: #e3ebfd;
+  padding: 18px 62px;
+  border: solid 2.5px #51596f;
+}
+
+/*ABOUT US 私たちについて*/
+.aboutus{
+  background-color: #ffffff;
+  text-align: center;
+  padding-top: 107px;
+  padding-bottom: 258px;
+}
+.aboutus h3{
+  font-size: 48px;
+  padding-bottom: 20px;
+}
+.aboutus h4{
+  font-size: 24px;
+  padding-bottom: 72px;
+
+}
+.aboutus img{
+  width: 500px;
+  height: 480px;
+}
+.aboutus p{
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+  /*brかspanタグを使って１マス開けるか*/
+}
+@media screen and (max-width:1000px){
+  .aboutus p{
+    max-width: 600px;
+  }
+  .pc-none1000{
+    display: none;
+  }
+}
+
+.aboutus .flex{
+  display: flex;
+  gap: 0 87px;
+  justify-content: center;
+}
+@media screen and (max-width:1000px){
+  .aboutus .flex{
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+
+/*FEATURES サービスの特徴*/
+.features{
+  background-color: #e3ebfd;
+  text-align: center;
+  padding-top: 115px;
+  padding-bottom: 182px;
+}
+.features img{
+  width: 300px;
+  height: 200px;
+}
+.features h3{
+  font-size: 48px;
+  padding-top: 115px;
+}
+.features h4{
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 96px;
+}
+h5{
+  font-size: 21px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  text-align: left;
+}
+.items p{
+  text-align: left;
+}
+.items span{
+  font-family: "Noto Sans", sans-serif;
+  background-color: #ffffff;
+  padding: 14px;
+  width: 300px;
+  height: 240px;
+}
+.flexbox{
+  display: flex;
+  justify-content: center;
+  gap: 115px 50px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.items{
+  width: 300px;
+
+}
+
+/*お悩みを解決しませんか？*/
+.worries{
+  background-image: url(picture/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 644px;
+
+}
+.worries::before{
+  background-color: rgba(0,0,0,.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ' ';
+}
+@media screen and (max-width:800px){
+  .worries{
+    height: 700px;
+  }
+}
+@media screen and (max-width:630px){
+  .worries{
+    height: 720px;
+  }
+}
+@media screen and (max-width:545px){
+  .worries{
+    height: 740px;
+  }
+}
+@media screen and (max-width:510px){
+  .worries{
+    height: 760px;
+  }
+}
+@media screen and (max-width:435px){
+  .worries{
+    height: 770px;
+  }
+}
+
+.worries-text{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+
+}
+@media screen and (max-width:800px){
+  .pc-none{
+    display: block;}
+}
+.worries h2{
+  font-size: 64px;
+  padding-top: 98px;
+  padding-bottom: 114px;
+  color: #ffffff;
+  text-align: center;
+}
+@media screen and (max-width:768px){
+  .worries h2{
+    font-size: 44px;
+  }
+}
+@media screen and (max-width:384px){
+  .worries h2{
+    font-size: 42px;
+  }
+}
+
+.worries p{
+  padding-bottom: 80px;
+  color: #ffffff;
+  line-height: 44px;
+  font-size: 24px;
+}
+@media screen and (max-width:800px){
+  .worries p{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:768px){
+  .worries p{
+    font-size: 18px;
+  }
+}
+.worries span{
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 12px;
+  color: #f25151;
+}
+/*VOICE お客様の声*/
+.voice{
+  background-color: #e3ebfd;
+  padding-top: 96px;
+  padding-bottom: 78px;
+}
+.voice h3{
+  font-size: 48px;
+  text-align: center;
+}
+.voice h4{
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 96px;
+  text-align: center;
+}
+.voice img{
+  height: 220px;
+  width: 220px;
+  margin: 42px 40px;
+}
+@media screen and (max-width:790px){
+  .voice img{
+    margin: 0;
+    padding-top: 20px;
+  }
+}
+.avoice{
+  background-color: #ffffff;
+  max-width: 1000px;
+  height: 305px;
+  display: flex;
+  margin-bottom: 64px;
+}
+.bvoice{
+  background-color: #ffffff;
+  max-width: 1000px;
+  height: 305px;
+  display: flex;
+}
+@media screen and (max-width:790px){
+  .avoice{
+    flex-direction: column-reverse;
+    height: auto;
+    align-items: center;
+  }
+  .bvoice{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  } 
+}
+
+
+.avoice h5{
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 42px;
+}
+.bvoice h5{
+  text-align: right;
+  padding-right: 40px;
+  padding-top: 42px;
+}
+@media screen and (max-width:790px){
+  .avoice h5{
+    text-align: center;
+    padding-left: 0px;
+  }
+  .bvoice h5{
+    text-align: center;
+    padding-right: 0px;
+  }
+}
+.avoice p{
+  font-family: "Noto Sans", sans-serif;
+  padding-left: 40px;
+  padding-bottom: 46px;
+}
+.bvoice p{
+  font-family: "Noto Sans", sans-serif;
+  padding-right: 40px;
+  padding-bottom: 46px;
+}
+@media screen and (max-width:790px){
+  .avoice p{
+    padding: 0 20px 20px 20px;
+
+  }
+  .bvoice p{
+    padding: 0 20px 20px 20px;
+
+  }
+}
+/*CONTACT お問い合わせ*/
+.contact{
+  padding-top: 123px;
+  padding-bottom: 182px;
+  background-color: #ffffff;
+  text-align: center;
+  
+}
+.contact h3{
+  font-size: 48px;
+}
+.contact h4{
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 94px;
+}
+.inquiry{
+  font-size: 30px;
+  padding-bottom: 48px;
+}
+.inquiryp{
+  font-size: 20px;
+  padding-bottom: 46px;
+}
+.marker{
+  background-color: #e43737;
+  margin-left: 12px;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+}
+label{
+  font-size: 24px;
+  margin-bottom: 70px;
+  display: inline-block;
+  width: 260px;
+  text-align: right;
+  
+}
+
+.text-box{
+  border: solid 1.25px;
+  width: 600px;
+  height: 60px;
+  text-align: left;
+  margin-left: 74px;
+  padding-left: 21px;
+}
+.message{
+  border: solid 1.25px;
+  width: 600px;
+  height: 200px;
+  text-align: left;
+  margin-left: 74px;
+  padding-left: 21px;
+}
+.form-contact{
+  display: flex;
+  justify-content: center;
+}
+
+
+.btn-submit{
+  margin-top: 86px;
+  margin-bottom: 182px;
+  display: inline-block;
+  position: relative;
+  padding: 12px 50px;
+  background-color: rgba(0,0,0,.8);
+  color: #fff;
+}
+
+
+
+
+
+
+/*フッター*/
+footer{
+  background-color: #000000;
+  color: #ffffff;
+  height: 400px;
+}
+.footer img{
+  width: 240px;
+  height: 80px;
+  margin-top: 49px;
+  margin-bottom: 31px;
+  /*margin: 49px 627px 31px 219px;*/
+}
+@media screen and (max-width:768px){
+  .footer img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.footer{
+  display: flex;
+  font-size: 24px;
+  justify-content: space-between;
+}
+@media screen and (max-width:768px){
+  .footer{
+    justify-content: center;
+  }
+}
+.address{
+  line-height: 36px;
+}
+.name{
+  margin-top: 33px;
+  margin-bottom: 127px;
+}
+.footer-menu{
+  margin-top: 78px;
+  line-height: 44px;
+  
+}
+@media screen and (max-width:768px){
+  .footer-menu{
+    display: none;
+  }
+}
+.coperight{
+  color: #000;
+  height: 78px;
+  text-align: center;
+}
+
