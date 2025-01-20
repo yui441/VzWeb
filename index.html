@@ -7,73 +7,82 @@
     <title>Vzweb | ボランティア団体様に向けた無料でホームページ制作</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script scr="jquery-3.6.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+
 </head>
+
 <body>
 
-    <header>
-       
-       <div class="nav aaaaa">
-        <div class="wrapper"> 
-        <div class="nav-inr">
-         <img src="picture/rogo.png" alt="ロゴ">
-
-         <div id="drawer_toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-         </div>
-        
-         <nav id="global_nav">
-            <ul class="main-nav">
-                <li><a href="#top">TOP</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#features">FEATURES</a></li>
-                <li><a href="#voice">VOICE</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-         </nav>
-         
+    <header class="header">
+        <!-- コンテンツ幅 -->
+        <div class="wrapper">
+          <div class="header-inr">
+            <!-- headerのロゴ画像 -->
+            <h2><a href=""><img src="picture/logo.png" alt="ロゴ画像"></a></h2>
+    
+            <!-- headerのナビ -->
+            <nav class="header-nav">
+              <ul>
+                <li><a href="">TOP</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">FEATURES</a></li>
+                <li><a href="">VOICE</a></li>
+                <li><a href="">CONTACT</a></li>
+              </ul>
+            </nav>
+    
+            <!-- スマホ用ハンバーガーメニューの線 -->
+            <buttom class="hamburger-button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </buttom>
+    
+            <!-- スマホ用ナビゲーション -->
+            <nav class="nav-sp">
+              <div class="nav-sp_inner">
+                <ul class="nav-sp_menu">
+                  <li class="nav-sp_item">
+                    <a class="nav-sp_link" href="">TOP</a>
+                  </li>
+                  <li class="nav-sp_item">
+                    <a class="nav-sp_link" href="">ABOUT</a>
+                  </li>
+                  <li class="nav-sp_item">
+                    <a class="nav-sp_link" href="">FEATURES</a>
+                  </li>
+                  <li class="nav-sp_item">
+                    <a class="nav-sp_link" href="">VOICE</a>
+                  </li>
+                  <li class="nav-sp_item">
+                    <a class="nav-sp_link" href="">CONTACT</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
-        </div>
-       </div>
-       <!--ハンバーガーメニュー-->
-       <div class="humburger">
-        <button class="hamburger-menu" id="js-hamburger-menu">
-           <span class="hamburger-menu__bar"></span>
-           <span class="hamburger-menu__bar"></span>
-           <span class="hamburger-menu__bar"></span>
-         </button>
-         <nav class="navigation">
-           <ul class="navigation__list">
-             <li class="navigation__list-item"><a href="#top" class="navigation__link">TOP</a></li>
-             <li class="navigation__list-item"><a href="#about" class="navigation__link">ABOUT</a></li>
-             <li class="navigation__list-item"><a href="#features" class="navigation__link">FEATURES</a></li>
-             <li class="navigation__list-item"><a href="#voice" class="navigation__link">VOICE</a></li>
-             <li class="navigation__list-item"><a href="#contact" class="navigation__link">CONTACT</a></li>
-           </ul>
-         </nav>
-       </div>
-       
-       <div class="top" id="top">
-
-         <h1>ホームページを無料で<br class="pc-none">
-            作成致します。 </h1>
-         <p>
-            ボランティア活動をされている方に向けてホームページを無料で作成させていただいております。  
-         </p>
-
-       </div> 
-
-       <div class="btn">
-        <span>ご予約はこちら</span>
-        <button class="contactbtn">CONTACT</button>
-       </div>
+      </header>
+    
+    
     
 
-    </header>
-
     <main>
+        <div class="top" id="top">
+
+            <h1>ホームページを無料で<br class="pc-none">
+               作成致します。 </h1>
+            <p>
+               ボランティア活動をされている方に向けてホームページを無料で作成させていただいております。  
+            </p>
+   
+          </div> 
+   
+          <div class="btn">
+           <span>ご予約はこちら</span>
+           <button class="contactbtn">CONTACT</button>
+          </div>
        <div class="aboutus wrapper" id="about">
         <h3>ABOUT US</h3>
         <h4>私たちについて</h4>
